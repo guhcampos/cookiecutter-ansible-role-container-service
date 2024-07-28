@@ -10,17 +10,17 @@ These inputs can be used to create an nginx role using Linuxserver's SWAG image:
 - name: nginx
   public: true
   template:
-    name: docker-service
+    name: {{cookiecutter.container_runtime}}-service
     context:
-      docker_cap_net_admin: true
-      docker_repo: lscr.io/linuxserver/swag
-      docker_tag: latest
+      container_cap_net_admin: true
+      container_repo: lscr.io/linuxserver/swag
+      container_tag: latest
       http_port: 80
       https_port: 443
-      docker_ports:
+      container_ports:
         _1: "80:80"
         _2: "443:443"
-      docker_volumes:
+      container_volumes:
         _1:
           src: /config
           dst: /config

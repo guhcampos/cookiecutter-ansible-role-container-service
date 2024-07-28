@@ -15,5 +15,5 @@
   ansible.builtin.template:
     src: "{{cookiecutter.service_full_name}}.nginx.{{cookiecutter.nginx_proxy_type}}.conf.j2"
     dest: "{{ var('nginx_proxy_config_home') }}/{{cookiecutter.service_full_name}}.{{cookiecutter.nginx_proxy_type}}.conf"
-  notify: restart docker-nginx
+  notify: restart {{cookiecutter.container_runtime}}-nginx
   tags: [nginx]
