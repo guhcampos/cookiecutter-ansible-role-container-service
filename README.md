@@ -1,3 +1,4 @@
-# cookiecutter-ansible-role-{{cookiecutter.container_runtime}}-service
+# cookiecutter-ansible-role-container-service
 
-A cookiecutter template for self hosting services with {{cookiecutter.container_runtime}}
+A cookiecutter template for self hosting services with containers
+s
